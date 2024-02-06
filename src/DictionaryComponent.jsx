@@ -17,15 +17,15 @@ const XDictionary = () => {
     // Case-insensitive search
     const result = dictionary.find(item => item.word.toLowerCase() === searchTerm.toLowerCase());
     if (result) {
-      setSearchResult(result.meaning);
+      setSearchResult(`Definition: ${result.meaning}`);
     } else {
-      setSearchResult('Word not found in the dictionary.');
+      setSearchResult('Definition: Word not found in the dictionary.');
     }
   };
 
   return (
     <div>
-      <h1>XDictionary</h1>
+      <h1>Dictionary App</h1>
       <div>
         <input
           type="text"
