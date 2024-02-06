@@ -17,10 +17,13 @@ const XDictionary = () => {
     // Case-insensitive search
     const result = dictionary.find(item => item.word.toLowerCase() === searchTerm.toLowerCase());
     if (result) {
-      setSearchResult(`Definition: ${result.meaning}`);
+      setSearchResult(result.meaning);
     } else {
-      setSearchResult('Definition: Word not found in the dictionary.');
+      setSearchResult('Word not found in the dictionary.');
     }
+
+    // Clear search term after search
+    setSearchTerm('');
   };
 
   return (
@@ -36,7 +39,7 @@ const XDictionary = () => {
         <button onClick={handleSearch}>Search</button>
       </div>
       <div>
-        <p>{searchResult}</p>
+        {searchResult && <p>Definition: {searchResult}</p>}
       </div>
     </div>
   );
