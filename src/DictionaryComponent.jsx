@@ -22,8 +22,6 @@ const XDictionary = () => {
     } else {
       setSearchResult('Word not found in the dictionary.');
     }
-
-    setSearchTerm('');
   };
 
   return (
