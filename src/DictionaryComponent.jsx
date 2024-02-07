@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const XDictionary = () => {
+  debugger;
   // Initializing the dictionary state
   const [dictionary] = useState([
     { word: "React", meaning: "A JavaScript library for building user interfaces." },
@@ -22,7 +23,6 @@ const XDictionary = () => {
       setSearchResult('Word not found in the dictionary.');
     }
 
-    // Clear search term after search
     setSearchTerm('');
   };
 
@@ -32,14 +32,14 @@ const XDictionary = () => {
       <div>
         <input
           type="text"
-          placeholder="Enter a word"
+          placeholder="Search for a word..."
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
         />
         <button onClick={handleSearch}>Search</button>
       </div>
       <div>
-        {searchResult && <p>Definition: {searchResult}</p>}
+       <p><b>Definition:</b></p><p>{searchResult}</p>
       </div>
     </div>
   );
