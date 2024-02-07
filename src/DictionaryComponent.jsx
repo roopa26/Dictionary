@@ -3,11 +3,17 @@ import React, { useState } from 'react';
 const XDictionary = () => {
   debugger;
   // Initializing the dictionary state
-  const [dictionary] = useState([
-    { word: "React", meaning: "A JavaScript library for building user interfaces." },
-    { word: "Component", meaning: "A reusable building block in React." },
-    { word: "State", meaning: "An object that stores data for a component." }
-  ]);
+  const [dictionary] = useState(
+    [
+    
+        { word: "React", meaning: "A JavaScript library for building user interfaces." },
+    
+        { word: "Component", meaning: "A reusable building block in React." },
+    
+        { word: "State", meaning: "An object that stores data for a component." }
+    
+    ]
+    );
 
   // State for the search term and search result
   const [searchTerm, setSearchTerm] = useState('');
@@ -37,7 +43,8 @@ const XDictionary = () => {
         <button onClick={handleSearch}>Search</button>
       </div>
       <div>
-       <p><b>Definition:</b></p><p>{searchResult}</p>
+       <p>Definition:</p>
+       <p>{searchResult}</p>
       </div>
     </div>
   );
